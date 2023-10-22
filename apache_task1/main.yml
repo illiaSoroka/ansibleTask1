@@ -27,3 +27,14 @@
     package: 
       name: unzip
       state: latest
+  
+  - name: Unzip template
+    unarchive:
+      src: /tmp/little-fashion.zip
+      dest: /tmp
+      remote_src: yes
+  
+  - name: Move template to the html folder
+    shell: mv /tmp/2127_little_fashion/* /var/www/html/
+    args:
+      creates: /var/www/html/www/index.html

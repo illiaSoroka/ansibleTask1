@@ -1,0 +1,14 @@
+- hosts: all
+  tasks:
+
+  - name: selinux disabled
+    when: "'centos' in inventory_hostname"
+    selinux:
+      state: "{{ selinux_state }}"
+      
+
+  - name: Install Apache
+    package:
+      name: "{{ apache_package }}"
+      state: present
+  

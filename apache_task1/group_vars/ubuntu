@@ -1,0 +1,2 @@
+selinux_state: permissive
+apache_package: "apache2"

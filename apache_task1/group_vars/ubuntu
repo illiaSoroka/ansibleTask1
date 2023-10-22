@@ -1,2 +1,2 @@
 selinux_state: permissive
-apache_package: "apache2"
+apache: "apache2"

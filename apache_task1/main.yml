@@ -9,6 +9,11 @@
 
   - name: Install Apache
     package:
-      name: "{{ apache_package }}"
+      name: "{{ apache }}"
       state: present
   
+  - name: Start Apache service 
+    systemd:
+      state: started
+      enabled: yes
+      name: "{{ apache }}"

@@ -38,3 +38,4 @@
     shell: mv /tmp/2127_little_fashion/* /var/www/html/
     args:
       creates: /var/www/html/www/index.html
+      
